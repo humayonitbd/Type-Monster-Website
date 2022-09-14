@@ -73,15 +73,17 @@ const gameOver = () => {
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
+  // resultModal.style.classList.add("resultSec");
   modalBackground.classList.toggle("hidden");
   // clear user text
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
   // show result
+  console.log(typeof errorCount)
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>You took: <span class="bold">${Math.ceil(timeTaken)}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;

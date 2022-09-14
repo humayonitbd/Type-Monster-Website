@@ -2,6 +2,7 @@ const histories = document.getElementById("histories");
 
 function addHistory(questionText, timeTaken, errorCount) {
   const newRow = document.createElement("div");
+  // newRow.classList.add("text-black");
   newRow.classList.add("card");
 
   newRow.innerHTML = `
