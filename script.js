@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("start");
+const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -10,6 +10,7 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
+// console.log(startTime)
 
 // Load and display question
 fetch("./texts.json")
@@ -88,32 +89,34 @@ const gameOver = () => {
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
-  startTime = null;
+  startTime = true;
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+  // console.log(startTime)
 };
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
 };
-
+  
 const start = () => {
   // If already started, do not start again
-  if (startTime) return;
-
+  if(startTime) return;
+  
   let count = 3;
-  countdownOverlay.style.display = "flex";
+  countdownOverlay.style.display = 'flex';
+  // display.classList.remove("inactive");
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = 'none';
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
