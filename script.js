@@ -87,7 +87,7 @@ const gameOver = () => {
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
-  startTime = true;
+  startTime = null;
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
@@ -111,7 +111,7 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
+    if (count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = 'none';
@@ -136,5 +136,6 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? Math.floor(timeSpent) : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${Math.floor(startTime ? timeSpent : 0)} seconds`;
+  // console.log(Math.floor(startTime ? timeSpent : 0))
 }, 1000);

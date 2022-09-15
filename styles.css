@@ -191,4 +191,7 @@ button {
     width: 100%;
     flex-direction: column;
   }
+  #result{
+    left: 8%;
+  }
 }
