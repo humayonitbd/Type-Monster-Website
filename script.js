@@ -91,7 +91,7 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
-  // console.log(startTime)
+  
 };
 
 const closeModal = () => {
@@ -137,5 +137,5 @@ setInterval(() => {
 
 
   document.getElementById("show-time").innerHTML = `${Math.floor(startTime ? timeSpent : 0)} seconds`;
-  // console.log(Math.floor(startTime ? timeSpent : 0))
+ 
 }, 1000);
