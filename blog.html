@@ -5,21 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typeing Speed Monster</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <h1>Blog section</h1>
+    <header class="container my-5">
+        <h1 class="text-center fw-bold">Blog section</h1>
     </header>
-    <main>
-        
+    <main class="container">
+        <section>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        local storage and session  storage মধ্যে  পার্থক্য কী ?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        সেশন স্টোরেজ স্থানীয় স্টোরেজের অনুরূপ; পার্থক্য হল যখন লোকাল স্টোরেজের ডেটা মেয়াদ শেষ হয় না, পৃষ্ঠার সেশন শেষ হলে সেশন স্টোরেজের ডেটা সাফ হয়ে যায়। যখনই ব্রাউজারে একটি নির্দিষ্ট ট্যাবে একটি নথি লোড করা হয়, একটি অনন্য পৃষ্ঠা সেশন তৈরি হয় এবং সেই নির্দিষ্ট ট্যাবে বরাদ্দ করা হয়।
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         local and global scope মধ্যে  পার্থক্য কী ?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        জাভাস্ক্রিপ্ট ভেরিয়েবলের মাত্র দুটি স্কোপ আছে। গ্লোবাল ভেরিয়েবল - একটি গ্লোবাল ভেরিয়েবলের একটি গ্লোবাল স্কোপ থাকে যার মানে এটি আপনার জাভাস্ক্রিপ্ট কোডের যেকোনো জায়গায় সংজ্ঞায়িত করা যেতে পারে। স্থানীয় ভেরিয়েবল - একটি স্থানীয় পরিবর্তনশীল শুধুমাত্র একটি ফাংশনের মধ্যে দৃশ্যমান হবে যেখানে এটি সংজ্ঞায়িত করা হয়েছে। ফাংশন প্যারামিটারগুলি সর্বদা সেই ফাংশনের স্থানীয় হয়৷
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        জাভাস্ক্রিপ্ট ইভেন্ট লুপের কাজ কিভাবে করবেন ?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        ইভেন্ট লুপ হল একটি প্রক্রিয়া যা টাস্ক কিউ থেকে কল স্ট্যাকে কলব্যাক ঠেলে দেওয়ার আগে কল স্ট্যাক পরিষ্কার হওয়ার জন্য অপেক্ষা করে। স্ট্যাক পরিষ্কার হয়ে গেলে, ইভেন্ট লুপ ট্রিগার করে এবং উপলব্ধ কলব্যাকের জন্য টাস্ক কিউ চেক করে। যদি কোনটি থাকে তবে এটি কল স্ট্যাকের দিকে ঠেলে দেয়, কল স্ট্যাকটি আবার পরিষ্কার হওয়ার জন্য অপেক্ষা করে এবং একই প্রক্রিয়া পুনরাবৃত্তি করে। ইভেন্ট লুপের একটি সহজ কাজ রয়েছে - কল স্ট্যাক এবং কলব্যাক কিউ নিরীক্ষণ করা। কল স্ট্যাক খালি থাকলে, ইভেন্ট লুপ সারি থেকে প্রথম ইভেন্টটি নিয়ে যাবে এবং এটিকে কল স্ট্যাকের দিকে ঠেলে দেবে, যা কার্যকরভাবে এটি চালায়। একটি সারি হল একটি ডেটা স্ট্রাকচার যা ফার্স্ট ইন ফার্স্ট আউট নীতিতে কাজ করে, তাই কাজগুলি সারিতে পুশ করার সাথে সাথে সেগুলি একই ক্রমে বেরিয়ে আসে
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        কতভাবে জাভা স্ক্রিপ্ট undefiend পাওয়া যায় ?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>আপনি যখন একটি বস্তুর অস্তিত্বহীন সম্পত্তি বা পদ্ধতি কল করেন তখন আপনি অনির্ধারিত মান পাবেন।</li>
+                            <li>একটি ভেরিয়েবল বা অবজেক্ট প্রপার্টি অ্যাক্সেস করে যা অবজেক্ট প্রপার্টি হিসেবে নেই তখন আপনি অনির্ধারিত মান পাবেন।</li>
+                            <li>আপনি যদি ফাংশন কলে কম আর্গুমেন্ট পাস করেন, তাহলে সেই প্যারামিটারটির মান অনির্ধারিত থাকবে।</li>
+                        </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
     </main>
-    
+    <!-- script js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

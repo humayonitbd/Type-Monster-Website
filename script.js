@@ -23,7 +23,6 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -41,11 +40,13 @@ const typeController = (e) => {
 
   userText += newLetter;
 
+
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
+    errorCount++;
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
@@ -80,7 +81,7 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
-  console.log(typeof errorCount)
+// console.log(count)
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${Math.floor(timeTaken)}</span> seconds</p>
