@@ -10,7 +10,6 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
-// console.log(startTime)
 
 // Load and display question
 fetch("./texts.json")
@@ -37,10 +36,7 @@ const typeController = (e) => {
   if (!validLetters.includes(newLetter)) {
     return;
   }
-
   userText += newLetter;
-
-
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
@@ -81,7 +77,6 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
-// console.log(count)
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${Math.floor(timeTaken)}</span> seconds</p>
